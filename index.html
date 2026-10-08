@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111">
+<title>Аксезім — personal page</title>
+<style>
+:root{--bg:#0b0b0c;--card:#151517;--text:#f5f5f2;--muted:#a5a5aa;--line:#29292d;--accent:#d8c5a6}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px 5vw;background:rgba(11,11,12,.55);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+.logo{font-weight:700;letter-spacing:.08em}.nav a{font-size:13px;color:#c9c9cc;margin-left:22px}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;gap:5vw;align-items:center;padding:110px 7vw 70px;max-width:1500px;margin:auto}
+.hero-copy .eyebrow{text-transform:uppercase;letter-spacing:.22em;color:var(--accent);font-size:12px}
+h1{font-size:clamp(60px,11vw,150px);line-height:.86;margin:22px 0;font-weight:700;letter-spacing:-.07em}
+.hero-copy p{max-width:560px;color:var(--muted);font-size:18px}
+.hero-photo{height:min(78vh,760px);min-height:520px;position:relative}
+.hero-photo img{width:100%;height:100%;object-fit:cover;border-radius:24px;filter:saturate(.9);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.hero-photo:after{content:"18 · TRANSLATOR";position:absolute;bottom:22px;left:22px;padding:9px 12px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.35);backdrop-filter:blur(10px);border-radius:999px;font-size:11px;letter-spacing:.14em}
+section{padding:110px 7vw;max-width:1500px;margin:auto}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:40px}
+h2{font-size:clamp(36px,6vw,76px);line-height:.95;margin:0;letter-spacing:-.05em}.section-head p{max-width:430px;color:var(--muted);margin:0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;min-height:210px}
+.card .num{font-size:12px;color:var(--accent);letter-spacing:.15em}.card h3{font-size:25px;margin:35px 0 8px}.card p{color:var(--muted);margin:0}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.gallery figure{margin:0;overflow:hidden;border-radius:22px;background:#111}
+.gallery img{display:block;width:100%;height:520px;object-fit:cover;transition:transform .6s ease,filter .6s ease}
+.gallery figure:first-child{grid-row:span 2}.gallery figure:first-child img{height:1058px}.gallery figure:hover img{transform:scale(1.035);filter:brightness(1.08)}
+.caption{padding:16px 18px;color:#aaa;font-size:13px}
+.quote{padding:70px 7vw;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.quote p{font-size:clamp(28px,5vw,62px);letter-spacing:-.04em;max-width:1000px;margin:0 auto}
+footer{padding:45px 7vw;color:#777;display:flex;justify-content:space-between;gap:20px;font-size:13px}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:800px){
+.nav{padding:15px 20px}.nav .links{display:none}.hero{display:flex;flex-direction:column;padding:105px 20px 45px;gap:30px}.hero-copy{width:100%}h1{font-size:70px}.hero-copy p{font-size:16px}.hero-photo{width:100%;height:70vh;min-height:430px}
+section{padding:75px 20px}.section-head{display:block}.section-head p{margin-top:18px}.about,.gallery{grid-template-columns:1fr}.gallery figure:first-child{grid-row:auto}.gallery img,.gallery figure:first-child img{height:520px}
+.quote{padding:60px 20px}footer{padding:35px 20px;display:block}footer span{display:block;margin-top:8px}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="#top">AKSEZIM</a>
+  <div class="links"><a href="#about">ABOUT</a><a href="#gallery">GALLERY</a></div>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-copy reveal">
+    <div class="eyebrow">personal page · 18</div>
+    <h1>Аксезім</h1>
+    <p>18 лет. Будущая переводчица. Человек с мягким характером, добрым сердцем и своим собственным взглядом на мир.</p>
+  </div>
+  <div class="hero-photo reveal">
+    <img src="images/photo1.jpeg" alt="Аксезім">
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-head reveal">
+    <h2>О ней</h2>
+    <p>Небольшая страница о человеке, которого невозможно описать одной фотографией.</p>
+  </div>
+  <div class="about">
+    <article class="card reveal"><div class="num">01 / EDUCATION</div><h3>Переводческое дело</h3><p>Учится на переводчика и развивает навыки работы с языками, текстами и культурами.</p></article>
+    <article class="card reveal"><div class="num">02 / CHARACTER</div><h3>Мягкое сердце</h3><p>Спокойная, добрая и внимательная к людям — именно это делает её характер особенным.</p></article>
+    <article class="card reveal"><div class="num">03 / LIFE</div><h3>Любовь к моментам</h3><p>От красивых платьев и цветов до открытых пространств и поездок — в каждом моменте есть своя история.</p></article>
+    <article class="card reveal"><div class="num">04 / STYLE</div><h3>Свой стиль</h3><p>Элегантность без лишнего шума: уверенный образ, естественная эстетика и индивидуальность.</p></article>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="section-head reveal">
+    <h2>Кадры</h2>
+    <p>Три разных настроения — один человек.</p>
+  </div>
+  <div class="gallery">
+    <figure class="reveal"><img src="images/photo2.jpeg" alt="Аксезім на природе"><figcaption class="caption">Пространство · горы · свобода</figcaption></figure>
+    <figure class="reveal"><img src="images/photo3.jpeg" alt="Аксезім с цветами"><figcaption class="caption">Моменты, которые хочется сохранить</figcaption></figure>
+    <figure class="reveal"><img src="images/photo1.jpeg" alt="Аксезім в элегантном образе"><figcaption class="caption">Элегантность в деталях</figcaption></figure>
+  </div>
+</section>
+
+<div class="quote reveal">
+  <p>«Быть собой — уже достаточно, чтобы быть особенной.»</p>
+</div>
+</main>
+
+<footer><span>AKSEZIM · PERSONAL PAGE</span><span>Made with care</span></footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
